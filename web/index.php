@@ -14,7 +14,7 @@
   <h1>Introduction</h1>
   <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="assignments.php">Assignment Portal</a></li>
         <li><?php
 echo "Today is " . date("Y/m/d") . "<br>";
