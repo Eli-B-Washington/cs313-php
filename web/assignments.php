@@ -15,7 +15,7 @@
   <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="assignments.html">Assignment Portal</a></li>
+        <li><a href="assignments.php">Assignment Portal</a></li>
     </ul>
 </nav>
 </header>
