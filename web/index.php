@@ -17,7 +17,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="assignments.php">Assignment Portal</a></li>
         <li><?php
-echo "Today is " . date("Y/m/d") . "<br>";
+echo "Today is " . date("m/d/Y") . "<br>";
 ?></li>
     </ul>
 </nav>
