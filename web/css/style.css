@@ -79,10 +79,6 @@ main h2{
 main a{
     color:var(--accent2-color);
 }
-main a:visited{
-    color: var(--primary-color);
-}
-
 
 header h1{
     margin: 25px;
