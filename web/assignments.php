@@ -23,7 +23,8 @@ echo "Today is " . date("m/d/Y") . "<br>";
 </nav>
 </header>
 <main>
-    <h2>Assignment Links</h2>
+    <h2>Assignment Links <br>
+    <img src="img/monitor.jpg" alt="Picture of two Monitors"></h2>
     <ul>
       <li>Week 1: <a href="hello.html">Prove 1</a></li>
       <li>Week 2: <a href="index.html">Prove 2 - HomePage</a></li>
