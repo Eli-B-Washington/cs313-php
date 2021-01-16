@@ -18,6 +18,7 @@
         <li><a href="assignments.php">Assignment Portal</a></li>
         <li><?php
 echo "Today is " . date("m/d/Y") . "<br>";
+echo 'Current PHP version' . phpversion();
 ?></li>
     </ul>
 </nav>
