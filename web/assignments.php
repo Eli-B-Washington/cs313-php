@@ -27,7 +27,7 @@ echo "Today is " . date("m/d/Y") . "<br>";
     <img src="img/monitor.jpg" alt="Picture of two Monitors"></h2>
     <ul>
       <li>Week 1: <a href="hello.html">Prove 1</a></li>
-      <li>Week 2: <a href="index.html">Prove 2 - HomePage</a></li>
+      <li>Week 2: <a href="index.php">Prove 2 - HomePage</a></li>
       <li>Week 2: <a href="#">Prove 2 - Project Proposal</a></li>
       <li>Week 3: <a href="#">Prove 3 -Shopping Cart</a></li>
       <li>Week 4: <a href="#">Prove 4 - DB Setup</a></li>
