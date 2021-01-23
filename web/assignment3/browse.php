@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,24 +23,49 @@
     </ul>
 </nav>
 </header>
+<?php
+// Set session variables
+$prod_id = "hello world";
+
+$_SESSION["cart"] = array();
+
+
+function addBackgammon(){
+array_push($_SESSION["cart"],$prod_id);
+}
+
+function addChess(){
+
+}
+function addDice(){
+    
+}
+function addLudo(){
+    
+}
+
+?>
 <main>
     <div>
     <img src="img/backgammon.jpg" alt="Backgammon board">
-    <p>Price: </p>
+    <p>Price: $20</p>
+    <input type="button" name="backgammon" value="Add">
     </div>
     <div>
    <img src="img/chess.jpg" alt="Chess Board">
-   <p>Price: </p>
+   <p>Price: $20</p>
+   <input type="button" name="chess" value="Add">
     </div>
     <div>
    <img src="img/dice.jpg" alt="Red Dice">
-   <p>Price: </p>
+   <p>Price: $5</p>
+   <input type="button" name="dice" value="Add">
     </div>
     <div>
    <img src="img/ludo.jpg" alt="Ludo Board">
-   <p>Price: </p>
+   <p>Price: $25</p>
+   <input type="button" name="ludo" value="Add">
     </div>
-
 </main>
 </body>
 

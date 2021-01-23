@@ -22,6 +22,32 @@
 </nav>
 </header>
 <main>
+<?php
+$name ="";
+$address="";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+
+  if (empty($_POST["address"])) {
+    $addressErr = "Email is required";
+  } else {
+    $address = test_input($_POST["address"]);
+  }
+}
+?>
+
+<form action="confirmation.php" method="post">
+Name: <input type="text" name="name" required><br>
+<span class="error">* <?php echo $nameErr;?></span>
+Address: <input type="text" name="address"><br>
+<span class="error">* <?php echo $addressErr;?></span>
+<input type="submit" name="submit" value="Confirm">
+</form>
    
 </main>
 </body>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +25,10 @@
 </nav>
 </header>
 <main>
-   
+<?php
+// Echo session variables that were set on previous page
+print_r($_SESSION['cart']);
+?>
 </main>
 </body>
 
