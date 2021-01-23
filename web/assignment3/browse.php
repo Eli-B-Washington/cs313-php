@@ -11,26 +11,32 @@
 
 <body>
 <header>
-  <h1>Introduction</h1>
+  <h1>BUY YOUR ITEMS!</h1>
   <nav>
     <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="assignments.php">Assignment Portal</a></li>
-        <li><?php
-echo "Today is " . date("m/d/Y") . "<br>";
-?></li>
+        <li><a href="browse.php">Home</a></li>
+        <li><a href="view_cart.php">View Cart</a></li>
     </ul>
 </nav>
 </header>
 <main>
-   <div>
-  <img src="img/me.jpg" alt="Image of Me">
-   </div>
-   <div>
-  <p>Hello my name is Eli Bear and I am close to finishing a degree in Applied Technology (should be finished in July). Pictured with me is my beautiful wife Morgan.  We
-      have two daughters, one who is 3 and another who is 1.  In my free time I enjoy playing sports, playing video games, board games, swimming, and most of all just spending time with family.
-  </p>
-  </div>
+    <div>
+    <img src="img/backgammon.jpg" alt="Backgammon board">
+    <p>Price: </p>
+    </div>
+    <div>
+   <img src="img/chess.jpg" alt="Chess Board">
+   <p>Price: </p>
+    </div>
+    <div>
+   <img src="img/dice.jpg" alt="Red Dice">
+   <p>Price: </p>
+    </div>
+    <div>
+   <img src="img/ludo.jpg" alt="Ludo Board">
+   <p>Price: </p>
+    </div>
+
 </main>
 </body>
 

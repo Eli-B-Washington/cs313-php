@@ -29,7 +29,7 @@ echo "Today is " . date("m/d/Y") . "<br>";
       <li>Week 1: <a href="hello.html">Prove 1</a></li>
       <li>Week 2: <a href="index.php">Prove 2 - HomePage</a></li>
       <li>Week 2: <a href="#">Prove 2 - Project Proposal</a></li>
-      <li>Week 3: <a href="browse.php">Prove 3 -Shopping Cart</a></li>
+      <li>Week 3: <a href="assignment3/browse.php">Prove 3 -Shopping Cart</a></li>
       <li>Week 4: <a href="#">Prove 4 - DB Setup</a></li>
       <li>Week 5: <a href="#">05 Prove: Assignment - DB Access</a></li>
       <li>Week 6: <a href="#">06 Prove : Assignment - DB Update</a></li>
