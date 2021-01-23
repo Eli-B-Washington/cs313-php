@@ -27,7 +27,10 @@ session_start();
 <main>
 <?php
 // Echo session variables that were set on previous page
-print_r($_SESSION['cart']);
+print_r($_SESSION['backgammon']);
+print_r($_SESSION['chess']);
+print_r($_SESSION['dice']);
+print_r($_SESSION['ludo']);
 ?>
 </main>
 </body>

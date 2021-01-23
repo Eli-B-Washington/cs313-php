@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,26 +31,26 @@ $name ="";
 $address="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
     $name = test_input($_POST["name"]);
-  }
-
-  if (empty($_POST["address"])) {
-    $addressErr = "Email is required";
-  } else {
-    $address = test_input($_POST["address"]);
-  }
+    $email = test_input($_POST["email"]);
 }
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 ?>
 
-<form action="confirmation.php" method="post">
-Name: <input type="text" name="name" required><br>
-<span class="error">* <?php echo $nameErr;?></span>
-Address: <input type="text" name="address"><br>
-<span class="error">* <?php echo $addressErr;?></span>
-<input type="submit" name="submit" value="Confirm">
+<h2>PHP Form Validation Example</h2>
+<form method="post" action="confirmation.php">  
+  Name: <input type="text" name="name" required><br>
+  Address: <input type="text" name="name" required>
+  <br><br>
+  <input type="submit" name="submit" value="Confirmation">
+
+  <br><br>
+  
 </form>
    
 </main>
