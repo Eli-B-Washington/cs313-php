@@ -14,7 +14,7 @@ session_start();
 
 
 <body>
-<?php
+ <?php
 // Set session variables
 $prod_id_0 = "backgammon";
 $prod_id_1 = "chess";

@@ -53,7 +53,7 @@ if(isset($_POST['ludo'])) {
 </header>
 
 <main>
-<form id="form1" action="browse.php" method="post">
+<form id="form1" action="view_cart.php" method="post">
     <div>
     <img src="img/backgammon.jpg" alt="Backgammon board">
     <p>Price: $20</p>
