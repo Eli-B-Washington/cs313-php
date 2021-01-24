@@ -2,6 +2,19 @@
 // Start the session
 session_start();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Page</title>
+    <meta name="description" content="A page that displays hello world">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
 <?php
 // Set session variables
 $prod_id_0 = "backgammon";
@@ -16,8 +29,8 @@ $_SESSION["ludo"] = array();
 
 
 if(isset($_POST['backgammon'])) {
-    $_SESSION['backgammon'][] = $prod_id_0;
-    echo count(array_keys($_SESSION["backgammon"], $prod_id_0));
+    $_SESSION['backgammon'] [] = $prod_id_0;
+    print_r($_SESSION['backgammon']);
 }
 if(isset($_POST['chess'])) { 
     $_SESSION['chess'][] = $prod_id_1; 
@@ -27,22 +40,8 @@ if(isset($_POST['dice'])) {
 } 
 if(isset($_POST['ludo'])) { 
     $_SESSION['ludo'][] = $prod_id_3;
-} 
-
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction Page</title>
-    <meta name="description" content="A page that displays hello world">
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-
-<body>
 <header>
   <h1>BUY YOUR ITEMS!</h1>
   <nav>
@@ -54,7 +53,7 @@ if(isset($_POST['ludo'])) {
 </header>
 
 <main>
-<form id="form1" action="" method="post">
+<form id="form1" action="browse.php" method="post">
     <div>
     <img src="img/backgammon.jpg" alt="Backgammon board">
     <p>Price: $20</p>

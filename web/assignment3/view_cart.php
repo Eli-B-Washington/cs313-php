@@ -14,6 +14,32 @@ session_start();
 
 
 <body>
+<?php
+// Set session variables
+$prod_id_0 = "backgammon";
+$prod_id_1 = "chess";
+$prod_id_2 = "dice";
+$prod_id_3 = "ludo";
+
+$_SESSION["backgammon"] = array();
+$_SESSION["chess"] = array();
+$_SESSION["dice"] = array();
+$_SESSION["ludo"] = array();
+
+
+if(isset($_POST['backgammon'])) {
+    array_push($_SESSION["backgammon"], $_POST["backgammon"]);
+}
+if(isset($_POST['chess'])) { 
+    $_SESSION['chess'][] = $prod_id_1; 
+} 
+if(isset($_POST['dice'])) { 
+    $_SESSION['dice'][] = $prod_id_2; 
+} 
+if(isset($_POST['ludo'])) { 
+    $_SESSION['ludo'][] = $prod_id_3;
+}
+?>   
 <header>
   <h1>Please Confirm The Items for your Purchase!</h1>
   <i class="fa fa-shopping-cart"></i>
