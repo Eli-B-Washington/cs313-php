@@ -25,7 +25,25 @@ session_start();
 </nav>
 </header>
 <main>
-   
+   <?php 
+        $name = test_input($_POST["name"]);
+        $email = test_input($_POST["email"]);
+         
+        $backgammon = $_SESSION["backgammon"] = array();
+        $chess = $_SESSION["chess"] = array();
+        $dice = $_SESSION["dice"] = array();
+        $ludo = $_SESSION["ludo"] = array();
+        
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          }
+?>
+
+
+         
 </main>
 </body>
 

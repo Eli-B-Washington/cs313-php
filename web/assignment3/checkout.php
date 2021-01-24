@@ -45,7 +45,7 @@ function test_input($data) {
 <h2>PHP Form Validation Example</h2>
 <form method="post" action="confirmation.php">  
   Name: <input type="text" name="name" required><br>
-  Address: <input type="text" name="name" required>
+  Address: <input type="text" name="email" required>
   <br><br>
   <input type="submit" name="submit" value="Confirmation">
 
