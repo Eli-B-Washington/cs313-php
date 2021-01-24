@@ -86,3 +86,11 @@ header h1{
 p{
     font-family: 'Roboto', sans-serif;
 }
+#form1 {
+display: grid;
+grid-template-columns: auto auto;
+grid-row-gap: 25px;
+}
+form img{
+    max-width: 75%;
+}

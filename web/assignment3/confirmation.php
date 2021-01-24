@@ -27,13 +27,13 @@ session_start();
 <main>
    <?php 
         $name = test_input($_POST["name"]);
-        $email = test_input($_POST["email"]);
+        $address = test_input($_POST["email"]);
          
-        $backgammon = $_SESSION["backgammon"] = array();
-        $chess = $_SESSION["chess"] = array();
-        $dice = $_SESSION["dice"] = array();
-        $ludo = $_SESSION["ludo"] = array();
-        
+        $backgammon = $_SESSION["backgammon"];
+        $chess = $_SESSION["chess"];
+        $dice = $_SESSION["dice"];
+        $ludo = $_SESSION["ludo"];
+
         function test_input($data) {
             $data = trim($data);
             $data = stripslashes($data);
@@ -41,6 +41,16 @@ session_start();
             return $data;
           }
 ?>
+
+<form  action="view_cart.php" method="post">
+<h2>Please Review</h2>
+<p>Name: <?=$name ?></p>
+<p>Address: <?=$address ?></p>
+<p>backgammon: <?php echo count($_SESSION['backgammon'])?></p>
+<p>chess: <?php echo count($_SESSION['chess'])?></p>
+<p>dice: <?php echo count($_SESSION['dice'])?></p>
+<p>ludo: <?php echo count($_SESSION['ludo'])?></p>
+</form>
 
 
          

@@ -2,6 +2,34 @@
 // Start the session
 session_start();
 ?>
+<?php
+// Set session variables
+$prod_id_0 = "backgammon";
+$prod_id_1 = "chess";
+$prod_id_2 = "dice";
+$prod_id_3 = "ludo";
+
+$_SESSION["backgammon"] = array();
+$_SESSION["chess"] = array();
+$_SESSION["dice"] = array();
+$_SESSION["ludo"] = array();
+
+
+if(isset($_POST['backgammon'])) {
+    $_SESSION['backgammon'][] = $prod_id_0;
+    echo count(array_keys($_SESSION["backgammon"], $prod_id_0));
+}
+if(isset($_POST['chess'])) { 
+    $_SESSION['chess'][] = $prod_id_1; 
+} 
+if(isset($_POST['dice'])) { 
+    $_SESSION['dice'][] = $prod_id_2; 
+} 
+if(isset($_POST['ludo'])) { 
+    $_SESSION['ludo'][] = $prod_id_3;
+} 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +38,7 @@ session_start();
     <title>Introduction Page</title>
     <meta name="description" content="A page that displays hello world">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 
@@ -25,7 +54,7 @@ session_start();
 </header>
 
 <main>
-<form  action="view_cart.php" method="post">
+<form id="form1" action="" method="post">
     <div>
     <img src="img/backgammon.jpg" alt="Backgammon board">
     <p>Price: $20</p>
