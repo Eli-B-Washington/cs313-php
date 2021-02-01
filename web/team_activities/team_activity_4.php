@@ -57,7 +57,7 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
   echo ' content: ' . $row['content'];
   echo '<br/>';
 }
-$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
+echo $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 ?>
 
 <form action="">
