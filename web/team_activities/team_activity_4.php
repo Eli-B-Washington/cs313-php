@@ -57,7 +57,7 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
   echo ' content: ' . $row['content'];
   echo '<br/>';
 }
-echo $stmt = $db->prepare('SELECT * FROM scriptures ');
+echo  $db->prepare('SELECT * FROM scriptures ');
 ?>
 
 <form action="">
