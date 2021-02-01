@@ -25,6 +25,7 @@ echo "Today is " . date("m/d/Y") . "<br>";
 <main>
     <h2>Assignment Links <br>
 <?php
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -56,7 +57,13 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
   echo ' content: ' . $row['content'];
   echo '<br/>';
 }
+$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 ?>
+
+<form action="">
+<input type="text">
+<input type="submit">
+</form>
 
     </ul>
 </main>
