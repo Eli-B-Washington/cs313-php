@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --primary-color: #1D3557;
+    --secondary-color: #F1FAEE;
+    --accent1-color: #E63946;
+    --accent2-color: #A8DADC;
+}
+
+img{
+    max-width:100%;
+}
+
+header{
+    background-color: var(--accent2-color);
+    max-width:900px;
+    margin: 0 auto;
+    color: var(--primary-color);
+    font-family: 'Heebo', sans-serif;  
+}
+header h1{
+    padding-left: 36px;
+    font-size:3rem;
+}
+main{
+    background-color: var(--accent1-color);
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+nav {
+    background-color: var(--secondary-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex
+}
+
+nav a {
+    padding: 1em;
+    min-width: 70px;
+    font-weight: bold;
+    font-size: 1.05em;
+    text-decoration: none;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--primary-color);
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--accent1-color);
+}
+main p{
+    color: var(--secondary-color);
+    font-size: 25px;
+    padding: 25px;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+main h2{
+    color:var(--accent2-color);
+    font-size: 3em;
+    padding-left:25px;
+}
+main a{
+    color:var(--accent2-color);
+}
+
+header h1{
+    margin: 25px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
