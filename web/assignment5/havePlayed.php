@@ -22,8 +22,7 @@
 </header>
 <main>
    <div>
-  <p>Hello my name is Eli Bear and I am close to finishing a degree in Applied Technology (should be finished in July). Pictured with me is my beautiful wife Morgan.  We
-      have two daughters, one who is 3 and another who is 1.  In my free time I enjoy playing sports, playing video games, board games, swimming, and most of all just spending time with family.
+  <p>
   </p>
   </div>
 </main>
