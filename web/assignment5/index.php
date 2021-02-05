@@ -22,7 +22,6 @@
 </nav>
 </header>
 <main>
-<p>
 <?php
 try
 {
@@ -59,10 +58,6 @@ foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax,
 echo  $db->prepare('SELECT * FROM public.boardGame ');
 ?>
 
-
-
-?>
-</p>
 </main>
 </body>
 
