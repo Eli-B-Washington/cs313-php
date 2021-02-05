@@ -1,16 +1,3 @@
-CREATE TABLE scriptures(
- id SERIAL NOT NULL PRIMARY KEY,
- book VARCHAR(100) NOT NULL,
- chapter INT NOT NULL,
- verse INT NOT NULL,
- content VARCHAR(100) NOT NULL
-);
-
-INSERT INTO scriptures (book, chapter, verse, content) VALUES( 'JOHN', 1, 5, 'And the alight shineth in bdarkness; and the darkness ccomprehended it not.');
-INSERT INTO scriptures (book, chapter, verse, content) VALUES('Doctrine and Covenants', 88, 49, 'The alight shineth in darkness, and the darkness comprehendeth it not; nevertheless,');
-INSERT INTO scriptures(book, chapter, verse, content)  VALUES('Doctrine and Covenants', 93, 28, 'Ye were also in the beginning with the Father; that which is aSpirit, even the Spirit of truth');
-INSERT INTO scriptures (book, chapter, verse, content) VALUES('Mosiah', 16, 9, 'He is the alight and the life of the world; yea, a light that is endless');
-
 
 
 
