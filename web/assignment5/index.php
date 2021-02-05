@@ -47,19 +47,18 @@ catch (PDOException $ex)
 }
 
 
-foreach ($db->query('SELECT title FROM public.boardGame') as $row)
+foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGame') as $row)
 {
-  echo 'Title: ' . $row['title'];
-  echo '<br/>';
+  ?>
+  <tr>
+  <td><?php echo 'Title: ' . $row['title']?></td>
+  <td><?php echo 'Publisher: ' . $row['author']?></td>
+  </tr>
+  <?php
 }
 echo  $db->prepare('SELECT * FROM public.boardGame ');
+?>
 
-//foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGame') as $row)
-//{
-//  echo 'Title: ' . $row['title'];
- // echo '<br/>';
-//}
-//echo  $db->prepare('SELECT * FROM public.boardGame ');
 
 
 ?>
