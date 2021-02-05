@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
+<body>
+<header>
+  <h1>All Games</h1>
+  <nav>
+    <ul>
+        <li><a href="index.php">All Games</a></li>
+        <li><a href="wantToPlay.php">Want to List</a></li>
+        <li><a href="havePlayed.php">Have Played List</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+
 <?php
 try
 {
@@ -30,29 +45,17 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-?>
 
-<body>
-<header>
-  <h1>All Games</h1>
-  <nav>
-    <ul>
-        <li><a href="index.php">All Games</a></li>
-        <li><a href="wantToPlay.php">Want to List</a></li>
-        <li><a href="havePlayed.php">Have Played List</a></li>
-    </ul>
-</nav>
-</header>
-<main>
-    <?php
+
 foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGames') as $row)
 {
   echo 'user: ' . $row['title'];
   echo '<br/>';
 }
 echo  $db->prepare('SELECT * FROM public.boardGames ');
-?>
 
+
+?>
 </main>
 </body>
 
