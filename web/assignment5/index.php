@@ -47,7 +47,7 @@ catch (PDOException $ex)
 }
 
 
-foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGame') as $row)
+foreach ($db->query('SELECT title FROM public.boardGame') as $row)
 {  echo 'Title: ' . $row['title'];
 echo '<br/>';
 }
