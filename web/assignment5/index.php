@@ -24,6 +24,7 @@
 <main>
 <p>
 <?php
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -46,6 +47,7 @@ catch (PDOException $ex)
   die();
 }
 
+
 foreach ($db->query('SELECT title FROM public.boardGames') as $row)
 {
   echo 'Title: ' . $row['title'];
@@ -62,7 +64,7 @@ echo  $db->prepare('SELECT * FROM public.boardGames ');
 
 
 ?>
-</p>
+
 </main>
 </body>
 
