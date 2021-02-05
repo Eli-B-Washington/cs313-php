@@ -53,12 +53,12 @@ foreach ($db->query('SELECT title FROM public.boardGames') as $row)
 }
 echo  $db->prepare('SELECT * FROM public.boardGames ');
 
-foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGames') as $row)
-{
-  echo 'Title: ' . $row['title'];
-  echo '<br/>';
-}
-echo  $db->prepare('SELECT * FROM public.boardGames ');
+//foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGames') as $row)
+//{
+//  echo 'Title: ' . $row['title'];
+ // echo '<br/>';
+//}
+//echo  $db->prepare('SELECT * FROM public.boardGames ');
 
 
 ?>
