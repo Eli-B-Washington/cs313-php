@@ -1,6 +1,4 @@
 
-
-
 CREATE TABLE public.user(
  id SERIAL NOT NULL PRIMARY KEY,
  username VARCHAR(100) NOT NULL UNIQUE,
@@ -35,15 +33,33 @@ CREATE TABLE public.hasPlayed (
 );
 
 
+INSERT INTO public.boardGame (title, author, rating, type, playersMin, playersMax, cooperative, length) VALUES ('Smallworld', 'Days of Wonder', 7.3, 'Strategy', 2, 5, 'false', 60);
+INSERT INTO public.boardGame (title, author, rating, type, playersMin, playersMax, cooperative, length) VALUES ('GloomHaven', 'Cephalofair Games', 8.8, 'Adventure', 1, 4, 'true', 90);
+INSERT INTO public.boardGame (title, author, rating, type, playersMin, playersMax, cooperative, length) VALUES ('The Lord of the Rings: Journeys in Middle-Earth','Fantasy Flight Games', 8.1, 'adventure', 1, 5, 'true', 90);
+INSERT INTO public.boardGame (title, author, rating, type, playersMin, playersMax, cooperative, length) VALUES ('The Lord of the Rings: Journeys in Middle-Earth','Fantasy Flight Games', 8.1, 'adventure', 1, 5, 'true', 90);
+INSERT INTO public.boardGame (title, author, rating, type, playersMin, playersMax, cooperative, length) VALUES ('Hellapagos','999 Games', 6.6, 'survival', 3, 12, 'true', 20);
+INSERT INTO public.boardGame (title, author, rating, type, playersMin, playersMax, cooperative, length) VALUES ('Coup','Indie Boards and Cards', 7.0, 'Deduction', 2, 6, 'false', 15);
 
-INSERT INTO public.boardGame VALUES( 0, 'Smallworld', 'Days of Wonder', 7.3, 'strategy', 2, 5, 'false', 60);
-INSERT INTO public.boardGame VALUES(1, 'The Lord of the Rings: Journeys in Middle-Earth','Fantasy Flight Games', 8.1, 'adventure', 1, 5, 'true', 90);
 
-INSERT INTO public.user VALUES(0, 'Eli Bear', 'Oso');
+INSERT INTO public.wantToPlay (userID, boardID, wantToPlay) VALUES(1, 2, 'true');
 
-INSERT INTO public.wantToPlay VALUES(0, 0, 1, 'true');
 
-INSERT INTO public.hasPlayed VALUES(1, 0, 0, 'true');
+
+INSERT INTO public.hasPlayed (userID, boardID, hasPlayed) VALUES(1, 1, 'true');
+INSERT INTO public.hasPlayed (userID, boardID, hasPlayed) VALUES(1, 3, 'true');
+INSERT INTO public.hasPlayed (userID, boardID, hasPlayed) VALUES(1, 4, 'true');
+INSERT INTO public.hasPlayed (userID, boardID, hasPlayed) VALUES(1, 5, 'true');
+
+
+
+
+
+
+INSERT INTO public.user (username, displayName) VALUES( 'Eli', 'Oso');
+INSERT INTO public.user (username, displayName) VALUES( 'Morgan', 'FaerBear');
+INSERT INTO public.user (username, displayName) VALUES( 'Andrew', 'Andross');
+INSERT INTO public.user (username, displayName) VALUES( 'Maggie', 'Muggles');
+INSERT INTO public.user (username, displayName) VALUES( 'Micah', 'Mighty Man');
 
 SELECT * FROM public.user;
 SELECT * FROM public.boardGame;
