@@ -23,7 +23,6 @@
 </header>
 <main>
 <p>
-<table>
 <?php
 try
 {
@@ -49,17 +48,11 @@ catch (PDOException $ex)
 
 
 foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGame') as $row)
-{
-  ?>
-  
-  <tr>
-  <td><?php echo 'Title: ' . $row['title']?></td>
-  <td><?php echo 'Publisher: ' . $row['author']?></td>
-  </tr>
-  <?php
+{  echo 'Title: ' . $row['title'];
+echo '<br/>';
 }
+echo  $db->prepare('SELECT * FROM public.boardGame ');
 ?>
-</table>
 </p>
 </main>
 </body>
