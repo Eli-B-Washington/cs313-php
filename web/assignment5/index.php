@@ -50,7 +50,7 @@ foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax,
   echo 'user: ' . $row['title'];
   echo '<br/>';
 }
-echo  $db->prepare('SELECT * FROM scriptures ');
+echo  $db->prepare('SELECT * FROM public.boardGames ');
 ?>
 
 </main>
