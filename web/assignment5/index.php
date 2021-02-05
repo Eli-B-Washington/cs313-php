@@ -22,7 +22,7 @@
 </nav>
 </header>
 <main>
-
+<p>
 <?php
 try
 {
@@ -62,6 +62,7 @@ echo  $db->prepare('SELECT * FROM public.boardGames ');
 
 
 ?>
+</p>
 </main>
 </body>
 
