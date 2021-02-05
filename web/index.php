@@ -11,12 +11,14 @@
 
 <body>
 <header>
-  <h1>All Board Games</h1>
+  <h1>Introduction</h1>
   <nav>
     <ul>
-        <li><a href="index.php">All Games</a></li>
-        <li><a href="havePlayed.php">Want to List</a></li>
-        <li><a href="wantToPlay.php">Have Played List</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="assignments.php">Assignment Portal</a></li>
+        <li><?php
+echo "Today is " . date("m/d/Y") . "<br>";
+?></li>
     </ul>
 </nav>
 </header>

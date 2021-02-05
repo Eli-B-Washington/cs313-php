@@ -1,8 +1,3 @@
-<?php
-// Start the session
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,68 +8,51 @@ session_start();
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
-<body>
 <?php
-// Set session variables
-$prod_id_0 = "backgammon";
-$prod_id_1 = "chess";
-$prod_id_2 = "dice";
-$prod_id_3 = "ludo";
+try
+{
+  $dbUrl = getenv('DATABASE_URL');
 
-$_SESSION["backgammon"] = array();
-$_SESSION["chess"] = array();
-$_SESSION["dice"] = array();
-$_SESSION["ludo"] = array();
+  $dbOpts = parse_url($dbUrl);
 
+  $dbHost = $dbOpts["host"];
+  $dbPort = $dbOpts["port"];
+  $dbUser = $dbOpts["user"];
+  $dbPassword = $dbOpts["pass"];
+  $dbName = ltrim($dbOpts["path"],'/');
 
-if(isset($_POST['backgammon'])) {
-    $_SESSION['backgammon'] [] = $prod_id_0;
-    print_r($_SESSION['backgammon']);
+  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-if(isset($_POST['chess'])) { 
-    $_SESSION['chess'][] = $prod_id_1; 
-} 
-if(isset($_POST['dice'])) { 
-    $_SESSION['dice'][] = $prod_id_2; 
-} 
-if(isset($_POST['ludo'])) { 
-    $_SESSION['ludo'][] = $prod_id_3;
+catch (PDOException $ex)
+{
+  echo 'Error!: ' . $ex->getMessage();
+  die();
 }
 ?>
+
+<body>
 <header>
-  <h1>BUY YOUR ITEMS!</h1>
+  <h1>All Games</h1>
   <nav>
     <ul>
-        <li><a href="browse.php">Home</a></li>
-        <li><a href="view_cart.php">View Cart</a></li>
+        <li><a href="index.php">All Games</a></li>
+        <li><a href="wantToPLay.php">Want to List</a></li>
+        <li><a href="havePlayed.php">Have Played List</a></li>
     </ul>
 </nav>
 </header>
-
 <main>
-<form id="form1" action="view_cart.php" method="post">
-    <div>
-    <img src="img/backgammon.jpg" alt="Backgammon board">
-    <p>Price: $20</p>
-    <input type="submit" name="backgammon" value="Add">
-    </div>
-    <div>
-   <img src="img/chess.jpg" alt="Chess Board">
-   <p>Price: $20</p>
-   <input type="submit" name="chess" value="Add">
-    </div>
-    <div>
-   <img src="img/dice.jpg" alt="Red Dice">
-   <p>Price: $5</p>
-   <input type="submit" name="dice" value="Add">
-    </div>
-    <div>
-   <img src="img/ludo.jpg" alt="Ludo Board">
-   <p>Price: $25</p>
-   <input type="submit" name="ludo" value="Add">
-    </div>
-    </form>
+    <?php
+foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length,  FROM public.boardGames') as $row)
+{
+  echo 'user: ' . $row['title'];
+  echo '<br/>';
+}
+echo  $db->prepare('SELECT * FROM scriptures ');
+?>
+
 </main>
 </body>
 
