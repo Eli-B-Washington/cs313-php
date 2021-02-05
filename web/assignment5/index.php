@@ -50,10 +50,12 @@ catch (PDOException $ex)
 foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax, cooperative, length, FROM public.boardGame') as $row)
 {
   ?>
+  <table>
   <tr>
   <td><?php echo 'Title: ' . $row['title']?></td>
   <td><?php echo 'Publisher: ' . $row['author']?></td>
   </tr>
+  </table>
   <?php
 }
 ?>
