@@ -22,6 +22,7 @@
 </nav>
 </header>
 <main>
+<p>
 <?php
 try
 {
@@ -56,7 +57,7 @@ foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax,
   <?php
 }
 ?>
-
+</p>
 </main>
 </body>
 
