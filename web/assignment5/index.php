@@ -55,7 +55,6 @@ foreach ($db->query('SELECT title, author, rating, type, playersMin, playersMax,
   </tr>
   <?php
 }
-echo  $db->prepare('SELECT * FROM public.boardGame ');
 ?>
 
 </main>
