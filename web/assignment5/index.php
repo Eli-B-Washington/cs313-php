@@ -24,7 +24,6 @@
 <main>
 <p>
 <?php
-
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -64,7 +63,7 @@ echo  $db->prepare('SELECT * FROM public.boardGames ');
 
 
 ?>
-
+</p>
 </main>
 </body>
 
