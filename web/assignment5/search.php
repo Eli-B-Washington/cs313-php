@@ -32,7 +32,6 @@ if(isset($POST['search'])){
    $output = 'There was no search results!';
   }
   else{
-
   }
   while($row = mysql_fetch_array($query)){
     $title = $row['title'];
