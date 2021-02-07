@@ -50,7 +50,7 @@ catch (PDOException $ex)
 
 foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
 {  echo 'Title: ' . $row['title'];
-    echo 'Publisher: ' . $row['author'];
+    echo '   Publisher: ' . $row['author'];
 echo '<br/>';
 }
 echo  $db->prepare('SELECT * FROM public.boardGame ');
