@@ -48,9 +48,7 @@ catch (PDOException $ex)
 
 
 
-echo $db->query(" SELECT * FROM public.boardGame,public.user")
-    echo '<br/>';
-}
+echo $db->query(" SELECT * FROM public.boardGame,public.user");
 
 ?>
 </main>
