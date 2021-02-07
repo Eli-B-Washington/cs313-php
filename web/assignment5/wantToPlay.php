@@ -48,8 +48,7 @@ catch (PDOException $ex)
 
 
 
-foreach ($db->query(" SELECT * FROM public.boardGame,public.user WHERE displayName ='Oso'") as $row)
-{   $row['displayName'];
+echo $db->query(" SELECT * FROM public.boardGame,public.user")
     echo '<br/>';
 }
 
