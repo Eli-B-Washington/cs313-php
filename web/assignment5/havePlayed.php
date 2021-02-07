@@ -46,12 +46,11 @@ catch (PDOException $ex)
 }
 
 
-foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
-{  echo 'Title: ' . $row['title'];
-    echo 'Publisher: ' . $row['author'];
-echo '<br/>';
+
+foreach ($db->query('SELECT displayName FROM public.user') as $row){ 
+  echo 'Name: ' . $row['displayName'];
+  echo '<br/>';
 }
-echo  $db->prepare('SELECT * FROM public.boardGame ');
 ?>
 </main>
 </body>
