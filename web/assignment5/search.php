@@ -74,7 +74,7 @@ if(isset($POST['search'])){
   </form>
 
   <?php
-  print('$output');
+  print($output);
   ?>
 </main>
 </body>
