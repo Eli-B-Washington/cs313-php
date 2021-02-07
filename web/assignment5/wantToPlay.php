@@ -49,10 +49,10 @@ catch (PDOException $ex)
 
 
 foreach ($db->query(" SELECT * FROM public.boardGame,public.user WHERE displayName ='Oso'") as $row)
-{  echo 'Display Name: ' . $row['displayName'];
+{   $row['displayName'];
     echo '<br/>';
 }
-echo  $db->prepare('SELECT * FROM public.boardGame ');
+
 ?>
 </main>
 </body>
