@@ -11,18 +11,21 @@
 
 <body>
 <header>
-  <h1>Want to PLay List</h1>
+  <h1>Introduction</h1>
   <nav>
     <ul>
-        <li><a href="index.php">All Games</a></li>
-        <li><a href="wantToPlay.php">Want to Play List</a></li>
-        <li><a href="havePlayed.php">Have Played List</a></li>
-        <li><a href="search.php">Search Games</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="assignments.php">Assignment Portal</a></li>
+        <li><?php
+echo "Today is " . date("m/d/Y") . "<br>";
+?></li>
     </ul>
 </nav>
 </header>
 <main>
+    <h2>Assignment Links <br>
 <?php
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -46,17 +49,31 @@ catch (PDOException $ex)
 }
 
 
-foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
-{  echo 'Title: ' . $row['title'];
-    echo '   Publisher: ' . $row['author'];
-echo '<br/>';
+foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+{
+  echo 'user: ' . $row['book'];
+  echo ' chapter: ' . $row['chapter'];
+  echo ' verse: ' . $row['verse'];
+  echo ' content: ' . $row['content'];
+  echo '<br/>';
 }
-echo  $db->prepare('SELECT * FROM public.boardGame ');
+echo  $db->prepare('SELECT * FROM scriptures ');
+
+
+
+
+
+
 
 ?>
 
+<form action="">
+<input type="text">
+<input type="submit">
+</form>
+
+    </ul>
 </main>
 </body>
 
-</html>
 </html>
