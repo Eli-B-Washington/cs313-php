@@ -46,3 +46,11 @@ SELECT * FROM public.user;
 SELECT * FROM public.boardGame;
 SELECT * FROM public.wantToPlay;
 SELECT * FROM public.hasPlayed;
+
+
+CREATE TABLE topic(
+	id SERIAL NOT NULL PRIMARY KEY,
+	name varchar(50) NOT NULL
+
+);
+

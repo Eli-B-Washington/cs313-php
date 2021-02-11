@@ -65,3 +65,15 @@ SELECT * FROM public.user;
 SELECT * FROM public.boardGame;
 SELECT * FROM public.wantToPlay;
 SELECT * FROM public.hasPlayed;
+
+
+INSERT INTO topic (name) VALUES( 'Faith');
+INSERT INTO topic (name) VALUES( 'Sacrifice');
+INSERT INTO topic (name) VALUES( 'Charity');
+
+
+CREATE TABLE scriptures_topic(
+	id SERIAL NOT NULL PRIMARY KEY,
+	scripture_id INT NOT NULL REFERENCES topic(id),
+	topic_id INT NOT NULL REFERENCES scriptures(id)
+);

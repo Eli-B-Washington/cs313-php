@@ -24,6 +24,16 @@ echo "Today is " . date("m/d/Y") . "<br>";
 </header>
 <main>
     <h2>Assignment Links <br>
+
+<form method="POST">
+Book: <input type="text" name="book">
+<br/>
+Chaper: <input type="text" name="chapter">
+<br/>
+Verse: <input type="text" name="verse">
+<br/>
+Content: <input type="textarea" name="content">
+<br/>
 <?php
 
 try
@@ -41,6 +51,7 @@ try
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 }
 catch (PDOException $ex)
 {
@@ -49,15 +60,8 @@ catch (PDOException $ex)
 }
 
 
-foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
-{
-  echo 'user: ' . $row['book'];
-  echo ' chapter: ' . $row['chapter'];
-  echo ' verse: ' . $row['verse'];
-  echo ' content: ' . $row['content'];
-  echo '<br/>';
-}
-echo  $db->prepare('SELECT * FROM scriptures ');
+
+
 
 
 
@@ -67,11 +71,6 @@ echo  $db->prepare('SELECT * FROM scriptures ');
 
 ?>
 
-<form action="">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
 <input type="submit">
 </form>
 
