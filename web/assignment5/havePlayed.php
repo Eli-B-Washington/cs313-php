@@ -17,8 +17,8 @@
         <li><a href="index.php">All Games</a></li>
         <li><a href="wantToPlay.php">Want to Play List</a></li>
         <li><a href="havePlayed.php">Have Played List</a></li>
-        <li><a href="add.php">Search Games</a></li>
-        <li><a href="search.php">Add Games</a></li>
+        <li><a href="search.php">Search Games</a></li>
+        <li><a href="add.php">Add Games</a></li>
     </ul>
 </nav>
 </header>
