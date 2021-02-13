@@ -28,24 +28,24 @@
   <input type="text" id="title" name="title"><br>
 
   <label for="publisher">Publisher:</label><br>
-  <input type="text" id="publisher" name="publisher">
+  <input type="text" id="publisher" name="publisher"><br>
 
   <label for="rating">Rating:</label><br>
-  <input type="int" id="rating" name="rating">
+  <input type="int" id="rating" name="rating"><br>
 
   <label for="type">Type:</label><br>
-  <input type="text" id="type" name="type">
+  <input type="text" id="type" name="type"><br>
 
   <label for="playersMin">Minimum Players: </label><br>
-  <input type="int" id="playersMin" name="playersMin">
+  <input type="int" id="playersMin" name="playersMin"><br>
 
   <label for="playersMax">Maximum Players:</label><br>
-  <input type="text" id="playersMax" name="playersMax">
+  <input type="text" id="playersMax" name="playersMax"><br>
 
   
 
   <label for="cooperative">Cooperative (y/n):</label><br>
-  <input type="text" id="cooperative" name="cooperative">
+  <input type="text" id="cooperative" name="cooperative"><br>
 
   <label for="length">Publisher:</label><br>
   <input type="int" id="length" name="length">
