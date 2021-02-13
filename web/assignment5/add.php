@@ -46,13 +46,27 @@
   <label for="cooperative">Cooperative (y/n):</label><br>
   <input type="text" id="cooperative" name="cooperative"><br>
 
-  <label for="length">Publisher:</label><br>
+  <label for="length">Length (Min):</label><br>
   <input type="int" id="length" name="length">
+
   <input type="submit" name="submit" value="Submit me!" />
 </form>
 
 <?php
-echo $_POST['title'];
+if(isset($_POST['submit']))
+{
+$title = $_POST['title'];
+$publisher = $_POST['publisher'];
+$rating = $_POST['rating'];
+$type = $_POST['type'];
+$playersMin = $_POST['playersMin'];
+$playersMax = $_POST['playersMax'];
+$cooperative = $_POST['cooperative'];
+$length = $_POST['Length'];
+
+
+echo $title . $publisher;
+}
 
 try
 {
