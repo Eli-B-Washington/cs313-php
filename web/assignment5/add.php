@@ -23,7 +23,7 @@
 </nav>
 </header>
 <main>
-<form>
+<form action="" method="post">
   <label for="title">Board Game Name:</label><br>
   <input type="text" id="title" name="title"><br>
 
@@ -43,16 +43,17 @@
   <input type="text" id="playersMax" name="playersMax"><br>
 
   
-
   <label for="cooperative">Cooperative (y/n):</label><br>
   <input type="text" id="cooperative" name="cooperative"><br>
 
   <label for="length">Publisher:</label><br>
   <input type="int" id="length" name="length">
-  <button>Submit</button>
+  <input type="submit" name="submit" value="Submit me!" />
 </form>
 
 <?php
+echo $_POST['title'];
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
