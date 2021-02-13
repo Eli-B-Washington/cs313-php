@@ -23,6 +23,7 @@
 </nav>
 </header>
 <main>
+
 <?php
 try
 {
@@ -52,7 +53,6 @@ foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
     echo '   Publisher: ' . $row['author'];
 echo '<br/>';
 }
-echo  $db->prepare('SELECT * FROM public.boardGame ');
 
 ?>
 
