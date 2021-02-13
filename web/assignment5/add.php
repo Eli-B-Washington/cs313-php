@@ -23,6 +23,35 @@
 </nav>
 </header>
 <main>
+<form>
+  <label for="title">Board Game Name:</label><br>
+  <input type="text" id="title" name="title"><br>
+
+  <label for="publisher">Publisher:</label><br>
+  <input type="text" id="publisher" name="publisher">
+
+  <label for="rating">Rating:</label><br>
+  <input type="int" id="rating" name="rating">
+
+  <label for="type">Type:</label><br>
+  <input type="text" id="type" name="type">
+
+  <label for="playersMin">Minimum Players: </label><br>
+  <input type="int" id="playersMin" name="playersMin">
+
+  <label for="playersMax">Maximum Players:</label><br>
+  <input type="text" id="playersMax" name="playersMax">
+
+  
+
+  <label for="cooperative">Cooperative (y/n):</label><br>
+  <input type="text" id="cooperative" name="cooperative">
+
+  <label for="length">Publisher:</label><br>
+  <input type="int" id="length" name="length">
+  <button>Submit</button>
+</form>
+
 <?php
 try
 {
@@ -45,14 +74,6 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
-
-foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
-{  echo 'Title: ' . $row['title'];
-    echo 'Publisher: ' . $row['author'];
-echo '<br/>';
-}
-echo  $db->prepare('SELECT * FROM public.boardGame ');
 ?>
 </main>
 </body>
