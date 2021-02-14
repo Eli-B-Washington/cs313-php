@@ -31,10 +31,10 @@
   <input type="text" id="publisher" name="publisher"><br>
 
   <label for="rating">Rating:</label><br>
-  <input type="number" id="rating" name="rating"><br>
+  <input type="number" step="0.1" id="rating" name="rating"><br>
 
   <label for="type">Type:</label><br>
-  <input type="number" id="type" name="type"><br>
+  <input type="number" step="0.1" id="type" name="type"><br>
 
   <label for="playersMin">Minimum Players: </label><br>
   <input type="number" id="playersMin" name="playersMin"><br>
