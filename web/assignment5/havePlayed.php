@@ -53,7 +53,6 @@ foreach ($db->query('SELECT title, author FROM public.boardgame') as $row)
 echo '<br/>';
 }
 
-
 echo  $db->prepare('SELECT * FROM public.boardgame');
 ?>
 </main>
