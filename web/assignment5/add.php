@@ -62,7 +62,7 @@ $playersMin = $_POST['playersMin'];
 $playersMax = $_POST['playersMax'];
 $cooperative = $_POST['cooperative'];
 $length = $_POST['Length'];
-echo $title . $publisher;
+echo $title . $publisher . $rating . $type . $playersMin . $playersMax . $cooperative . $length;
 }
 
 try
