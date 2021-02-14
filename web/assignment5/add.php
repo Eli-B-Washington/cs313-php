@@ -87,8 +87,10 @@ catch (PDOException $ex)
   die();
 }
 
-$db->query('INSERT INTO public.boardGame(title, publisher, rating, type, playersmin, playersmax, cooperative, length) VALUES ($title, $publisher, $rating, $type, $playersmin, $playersmax, $cooperative, $length)');
-    echo  $db->prepare('SELECT * FROM public.boardGame ');
+
+$db->query('INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES ($title, $publisher, $rating, $type, $playersmin, $playersmax, $cooperative, $length)');
+
+    echo  $db->prepare('SELECT * FROM public.boardgame ');
 ?>
 </main>
 </body>
