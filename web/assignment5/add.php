@@ -31,13 +31,13 @@
   <input type="text" id="publisher" name="publisher"><br>
 
   <label for="rating">Rating:</label><br>
-  <input type="int" id="rating" name="rating"><br>
+  <input type="number" id="rating" name="rating"><br>
 
   <label for="type">Type:</label><br>
-  <input type="text" id="type" name="type"><br>
+  <input type="number" id="type" name="type"><br>
 
   <label for="playersMin">Minimum Players: </label><br>
-  <input type="int" id="playersMin" name="playersMin"><br>
+  <input type="number" id="playersMin" name="playersMin"><br>
 
   <label for="playersMax">Maximum Players:</label><br>
   <input type="text" id="playersMax" name="playersMax"><br>
@@ -47,7 +47,7 @@
   <input type="text" id="cooperative" name="cooperative"><br>
 
   <label for="length">Length (Min):</label><br>
-  <input type="int" id="length" name="length">
+  <input type="number" id="length" name="length">
 
   <input type="submit" name="submit" value="Submit me!" />
 </form>
