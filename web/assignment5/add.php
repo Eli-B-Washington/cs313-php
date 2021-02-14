@@ -53,8 +53,7 @@
 </form>
 
 <?php
-if(isset($_POST['submit']))
-{
+if(isset($_POST['submit'])) {
 $title = $_POST['title'];
 $publisher = $_POST['publisher'];
 $rating = $_POST['rating'];
@@ -87,6 +86,10 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+
+$db->query('INSERT INTO public.boardGame(title, publisher, rating, type, playersmin, playersmax, cooperative, length) VALUES ($title, $publisher, $rating, $type, $playersmin, $playersmax, $cooperative, $length)');
+
+    echo  $db->prepare('SELECT * FROM public.boardGame ');
 ?>
 </main>
 </body>
