@@ -88,9 +88,20 @@ catch (PDOException $ex)
 }
 
 
-$db->query('INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES ($title, $publisher, $rating, $type, $playersmin, $playersmax, $cooperative, $length)');
+$query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length)';
 
-    echo  $db->prepare('SELECT * FROM public.boardgame ');
+    $stmt = $db->prepare($query);
+    $stmt -> bindValue(":title", $title);
+    $stmt -> bindValue(":author", $publisher);
+    $stmt -> bindValue(":rating", $rating);
+    $stmt -> bindValue(":type", $type);
+    $stmt -> bindValue(":playersmin", $playersMin);
+    $stmt -> bindValue(":playersMax", $playersMax);  
+    $stmt -> bindValue(":cooperative", $cooperative);
+    $stmt -> bindValue(":length", $length);
+    $stmt -> execute();
+
+    $newid = $PDO ->lastInsertId("public.boardGame_id_seq");
 ?>
 </main>
 </body>

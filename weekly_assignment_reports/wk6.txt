@@ -1,0 +1,33 @@
+After completing the assignment, please answer the questions in this text file
+and submit it to I-Learn.
+1.	Copy and paste the URL for your web application:
+https://stormy-sands-82203.herokuapp.com/index.php
+
+
+2.	Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/Eli-B-Washington/cs313-php
+
+3. Briefly list and describe the elements of the application that are 
+functioning. Include any special instructions about how to login and/or use 
+your application.
+So I am able to get the information posted to PHP but I still need a way to add information to the database.  I am not too worried about it I just need to find the right command.
+
+4. Briefly describe any pieces of the assignment that are not yet working
+correctly.
+Not able to Add, update, or delete yet from the application. So still need to do everything from this week.
+
+5. Briefly describe the "coolest" thing you learned while completing this 
+assignment.
+Well I really liked doing the team assignment and seeing the components of updating the information in action.
+
+6. What is a benefit of having a foreign key constraint?
+A foreign Key constraint can help so that data isn’t inserted where it shouldn’t be.
+
+7. Please select the category you feel best describes your assignment:
+1 - Some attempt was made
+2 - Developing, but significantly deficient – Here.
+3 - Slightly deficient, but still mostly adequate
+4 - Meets requirements
+5 - Shows creativity and excels above and beyond requirements
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I think it is closer to being where it should than it looks.  I just need to find out what statement I using incorrectly to insert.  Updating and deleting should fall along the same lines.
