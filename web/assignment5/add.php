@@ -27,8 +27,8 @@
   <label for="title">Board Game Name:</label><br>
   <input type="text" id="title" name="title"><br>
 
-  <label for="publisher">Publisher:</label><br>
-  <input type="text" id="publisher" name="publisher"><br>
+  <label for="author">Publisher:</label><br>
+  <input type="text" id="author" name="author"><br>
 
   <label for="rating">Rating:</label><br>
   <input type="number" step="0.1" id="rating" name="rating"><br>
@@ -36,11 +36,11 @@
   <label for="type">Type:</label><br>
   <input type="number" step="0.1" id="type" name="type"><br>
 
-  <label for="playersMin">Minimum Players: </label><br>
-  <input type="number" id="playersMin" name="playersMin"><br>
+  <label for="playersmin">Minimum Players: </label><br>
+  <input type="number" id="playersmin" name="playersmin"><br>
 
-  <label for="playersMax">Maximum Players:</label><br>
-  <input type="text" id="playersMax" name="playersMax"><br>
+  <label for="playersmax">Maximum Players:</label><br>
+  <input type="text" id="playersmax" name="playersmax"><br>
 
   
   <label for="cooperative">Cooperative (y/n):</label><br>
@@ -53,26 +53,24 @@
 </form>
 
 <?php
-
-
 require 'db_connect.php';
 $db = get_db();
 
 
-if(isset($_POST['submit'])) {
+if($_SERVER['REQUEST_METHOD'] == ($_POST)) {
 $title = $_POST['title'];
-$publisher = $_POST['publisher'];
+$author = $_POST['author'];
 $rating = $_POST['rating'];
 $type = $_POST['type'];
-$playersMin = $_POST['playersMin'];
-$playersMax = $_POST['playersMax'];
+$playersmin = $_POST['playersmin'];
+$playersmax = $_POST['playersmax'];
 $cooperative = $_POST['cooperative'];
 $length = $_POST['length'];
-echo $title . $publisher . $rating . $type . $playersMin . $playersMax . $cooperative . $length;
+echo $title . $author . $rating . $type . $playersMin . $playersMax . $cooperative . $length;
 
 
 
-if(!empty($_POST['password'])){
+if(!empty($_POST['title'])){
 
   try{
 $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length)';
@@ -82,7 +80,7 @@ $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, 
     $stmt -> bindValue(":rating", $rating);
     $stmt -> bindValue(":type", $type);
     $stmt -> bindValue(":playersmin", $playersMin);
-    $stmt -> bindValue(":playersMax", $playersMax);  
+    $stmt -> bindValue(":playersmax", $playersMax);  
     $stmt -> bindValue(":cooperative", $cooperative);
     $stmt -> bindValue(":length", $length);
     $stmt -> execute();
