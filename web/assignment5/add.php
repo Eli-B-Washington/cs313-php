@@ -57,7 +57,7 @@ require 'db_connect.php';
 $db = get_db();
 
 
-if($_SERVER['REQUEST_METHOD'] == ($_POST)) {
+if($_SERVER['REQUEST_METHOD'] == ('POST')) {
 $title = $_POST['title'];
 $author = $_POST['author'];
 $rating = $_POST['rating'];
