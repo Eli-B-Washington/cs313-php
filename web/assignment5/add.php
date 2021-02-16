@@ -53,6 +53,20 @@
 </form>
 
 <?php
+/*
+values from the table
+
+id SERIAL NOT NULL PRIMARY KEY,
+title VARCHAR(100) NOT NULL,
+author VARCHAR(100) NOT NULL,
+rating FLOAT(3) NOT NULL,
+type VARCHAR(100) NOT NULL,
+playersMin SMALLINT NOT NULL,
+playersMax SMALLINT NOT NULL,
+cooperative BOOLEAN NOT NULL,
+length int*/
+
+
 require 'db_connect.php';
 $db = get_db();
 
@@ -76,11 +90,11 @@ if(!empty($_POST['title'])){
 $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length)';
     $stmt = $db->prepare($query);
     $stmt -> bindValue(":title", $title);
-    $stmt -> bindValue(":author", $publisher);
+    $stmt -> bindValue(":author", $author);
     $stmt -> bindValue(":rating", $rating);
     $stmt -> bindValue(":type", $type);
-    $stmt -> bindValue(":playersmin", $playersMin);
-    $stmt -> bindValue(":playersmax", $playersMax);  
+    $stmt -> bindValue(":playersmin", $playersmin);
+    $stmt -> bindValue(":playersmax", $playersmax);  
     $stmt -> bindValue(":cooperative", $cooperative);
     $stmt -> bindValue(":length", $length);
     $stmt -> execute();
