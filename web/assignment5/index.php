@@ -30,12 +30,16 @@ require 'db_connect.php';
 $db = get_db();
 
 
+echo "<table>";
+
 foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
-{  echo 'Title: ' . $row['title'];
-    echo '   Publisher: ' . $row['author'];
-echo '<br/>';
+{  
+  echo "<tr><td>" . $row['title'] . "</td><td>" . $row['author'] . "</td></tr>";
 }
-echo  $db->prepare('SELECT * FROM public.boardGame ');
+
+echo "</table>";
+
+
 ?>
 </p>
 </main>
