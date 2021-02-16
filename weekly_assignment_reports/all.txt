@@ -1,0 +1,30 @@
+    require 'db_connect.php';
+    $db = get_db();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        if(!empty($_POST['password'])){
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            try{
+                $query = 'INSERT INTO userLogin(username, password) VALUES(:username, :password)';
+                $stmt = $db->prepare($query);
+    
+                $stmt->bindValue(':username', $username);
+                $stmt->bindValue(':password', $hashed_password);
+                $stmt->execute();
+    
+                $newId = $pdo->lastInsertId('userLogin_id_seq');
+            }
+            catch(Exception $ex){
+                echo "Error with DB. Details: $ex";
+                die();
+            }
+
+
+
+
+        }
+    }
