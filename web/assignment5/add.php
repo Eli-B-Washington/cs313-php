@@ -53,6 +53,12 @@
 </form>
 
 <?php
+
+
+require 'db_connect.php';
+$db = get_db();
+
+
 if(isset($_POST['submit'])) {
 $title = $_POST['title'];
 $publisher = $_POST['publisher'];
@@ -63,33 +69,13 @@ $playersMax = $_POST['playersMax'];
 $cooperative = $_POST['cooperative'];
 $length = $_POST['length'];
 echo $title . $publisher . $rating . $type . $playersMin . $playersMax . $cooperative . $length;
-}
-
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
-
-  $dbOpts = parse_url($dbUrl);
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
 
 
+
+if(!empty($_POST['password'])){
+
+  try{
 $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length)';
-
     $stmt = $db->prepare($query);
     $stmt -> bindValue(":title", $title);
     $stmt -> bindValue(":author", $publisher);
@@ -100,8 +86,14 @@ $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, 
     $stmt -> bindValue(":cooperative", $cooperative);
     $stmt -> bindValue(":length", $length);
     $stmt -> execute();
-
-    $newid = $PDO ->lastInsertId("public.boardGame_id_seq");
+    $newid = $pdo ->lastInsertId("public.boardGame_id_seq");
+  }
+  catch(Exception $ex){
+    echo "Error with DB. Details: $ex";
+die();
+  }
+}
+}
 ?>
 </main>
 </body>
