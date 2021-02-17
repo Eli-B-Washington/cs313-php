@@ -40,9 +40,9 @@ echo "<table>";
 foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax, cooperative, length FROM public.boardGame') as $row)
 {  
   echo "<tr><td>" . $row['title'] . "</td><td>" . $row['author'] . "</td></tr>"
-  . $row['rating'] . "</td></tr>" . $row['type'] . "</td></tr>"
-  . $row['playersmin'] . "</td></tr>" . $row['playersmax'] . "</td></tr>"
-  . $row['cooperative'] . "</td></tr>" . $row['length'] . "</td></tr>";
+  . "<tr><td>" . $row['rating'] . "</td></tr>" . $row['type'] . "</td></tr>"
+  . "<tr><td>" . $row['playersmin'] . "</td></tr>" . $row['playersmax'] . "</td></tr>"
+  . "<tr><td>" . $row['cooperative'] . "</td></tr>" . $row['length'] . "</td></tr>";
 }
 
 echo "</table>";
