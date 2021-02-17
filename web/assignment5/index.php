@@ -32,9 +32,6 @@ $db = get_db();
 $data = $db->query('SELECT title, author FROM public.boardGame');
 
 
-
-
-
 echo "<table>";
 echo "<th>". "Title" . "</th><th>". "Publisher" . "</th><th>". "Rating"
 . "</th><th>" . "Type" . "</th><th>". "Minimum Players" . "</th><th>".
