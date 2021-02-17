@@ -33,7 +33,7 @@ $data = $db->query('SELECT title, author FROM public.boardGame');
 
 
 echo "<table>";
-echo "<th>". "Title" . "</th><th>". "Publisher" . "</th><th>". "Rating"
+echo "<th>". "" . "</th><th>". "Title" . "</th><th>". "Publisher" . "</th><th>". "Rating"
 . "</th><th>" . "Type" . "</th><th>". "Minimum Players" . "</th><th>".
 "Maximum Players" . "</th><th>". "Cooperative" . "</th><th>".
 "Length" . "</th>";
