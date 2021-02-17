@@ -27,8 +27,6 @@ main{
     background-color: var(--accent1-color);
     max-width: 900px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto;
 }
 nav {
     background-color: var(--secondary-color);
