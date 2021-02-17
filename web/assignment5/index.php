@@ -31,37 +31,21 @@ $db = get_db();
 
 $data = $db->query('SELECT title, author FROM public.boardGame');
 
-function display_data($data) {
-  $output = '<table>';
-  foreach($data as $key => $var) {
-      $output .= '<tr>';
-      foreach($var as $k => $v) {
-          if ($key === 0) {
-              $output .= '<td><strong>' . $k . '</strong></td>';
-          } else {
-              $output .= '<td>' . $v . '</td>';
-          }
-      }
-      $output .= '</tr>';
-  }
-  $output .= '</table>';
-  echo $output;
-}
-
-
-display_data($data);
 
 
 
 
-/*echo "<table>";
+echo "<table>";
 
-foreach ($db->query('SELECT title, author FROM public.boardGame') as $row)
+foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax, cooperative, length FROM public.boardGame') as $row)
 {  
-  echo "<tr><td>" . $row['title'] . "</td><td>" . $row['author'] . "</td></tr>";
+  echo "<tr><td>" . $row['title'] . "</td><td>" . $row['author'] . "</td></tr>"
+  . $row['rating'] . "</td></tr>" . $row['type'] . "</td></tr>"
+  . $row['playersmin'] . "</td></tr>" . $row['playersmax'] . "</td></tr>"
+  . $row['cooperative'] . "</td></tr>" . $row['length'] . "</td></tr>";
 }
 
-echo "</table>";*/
+echo "</table>";
 
 
 ?>
