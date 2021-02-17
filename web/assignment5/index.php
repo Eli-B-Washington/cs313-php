@@ -49,8 +49,10 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 
 echo "</table>";
 
-
 ?>
+
+<button type="button">Delete</button>
+<button type="button">Update</button>
 </p>
 </main>
 </body>
