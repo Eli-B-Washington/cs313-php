@@ -29,6 +29,8 @@
 require 'db_connect.php';
 $db = get_db();
 
+$data = $db->query('SELECT title, author FROM public.boardGame');
+
 function display_data($data) {
   $output = '<table>';
   foreach($data as $key => $var) {
@@ -45,6 +47,10 @@ function display_data($data) {
   $output .= '</table>';
   echo $output;
 }
+
+
+display_data($data);
+
 
 
 
