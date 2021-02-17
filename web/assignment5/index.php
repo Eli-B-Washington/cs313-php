@@ -51,9 +51,10 @@ echo "</table>";
 
 ?>
 
+
+</p>
 <button type="button">Delete</button>
 <button type="button">Update</button>
-</p>
 </main>
 </body>
 
