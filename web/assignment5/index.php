@@ -56,9 +56,7 @@ $detectinglocations = 'public.boardGame';
 
 foreach($del_id as $value){
    $query = "DELETE FROM ".$detectinglocations." WHERE ID='".$value."'";
-   $stmt = $db->prepare($query);
-   $stmt -> execute();
-   $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   $stmt = $db->query($query);
 }
 ?>
 
