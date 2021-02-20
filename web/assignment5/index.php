@@ -25,7 +25,7 @@
 </header>
 <main>
 <p>
-<form action="" method="POST">
+<form action="index.php" method="POST">
 <?php 
 require 'db_connect.php';
 $db = get_db();
@@ -67,7 +67,7 @@ if(isset($_POST['submit']))
 
 </p>
 
-<input type="submit" name="submit" value="submit" >
+<input type="submit" name="submit" value="Delete" >
 <button type="button">Update</button>
 <button id="addButton">Add</button>
 </form>
