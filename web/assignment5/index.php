@@ -26,11 +26,9 @@
 <main>
 <p>
 <form action="" method="post">
-<?php
+<?php 
 require 'db_connect.php';
 $db = get_db();
-
-$data = $db->query('SELECT title, author FROM public.boardGame');
 
 
 echo "<table>";
@@ -50,7 +48,9 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 
 echo "</table>";
 
+?>
 
+<?php
 $del_id = $_POST['checkbox']; 
 $detectinglocations = 'public.boardGame';
 
@@ -59,7 +59,6 @@ foreach($del_id as $value){
    echo $sql;
    $result = $db->query($sql);
 }
-
 ?>
 
 
