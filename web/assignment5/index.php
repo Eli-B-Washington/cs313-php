@@ -65,10 +65,16 @@ foreach($del_id as $value){
 
 </p>
 
-<input type="submit">
+<input type="submit" value="Delete">
 <button type="button">Update</button>
+<button id="addButton">Add</button>
 </form>
 </main>
+<script type="text/javascript">
+    document.getElementById("addButton").onclick = function () {
+        location.href = "add.php";
+    };
+</script>
 </body>
 
 </html>
