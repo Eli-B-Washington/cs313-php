@@ -55,7 +55,8 @@ $del_id = $_POST['checkbox'];
 $detectinglocations = 'public.boardGame';
 
 foreach($del_id as $value){
-   $query = "DELETE FROM ".$detectinglocations." WHERE ID='".$value."'";
+   $query = "DELETE FROM ".$detectinglocations." WHERE id='".$value."'";
+   echo $query;
    $stmt = $db->query($query);
 }
 ?>
