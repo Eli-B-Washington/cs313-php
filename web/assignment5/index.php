@@ -39,7 +39,7 @@ echo "<th>". "" . "</th><th>". "Title" . "</th><th>". "Publisher" . "</th><th>".
 
 foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax, cooperative, length FROM public.boardGame') as $row)
 {  
-  echo "<tr><td>" . "<input name='checkbox[]' type='checkbox''>" . "</td><td>" .
+  echo "<tr><td>" . "<input name='checkbox' type='checkbox''>" . "</td><td>" .
     $row['title'] . "</td><td>" . $row['author'] ."</td><td>"
   . $row['rating'] . "</td><td>" . $row['type'] . "</td><td>"
   . $row['playersmin'] . "</td><td>". $row['playersmax'] . "</td><td>"
