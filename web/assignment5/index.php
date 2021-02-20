@@ -64,7 +64,7 @@ if(isset($_POST['submit']))
    {
       $id = $checkbox[$i];
 
-      $sql1 = "DELETE  FROM `public.boardgame` WHERE `id` =' $id' ";
+      $sql1 = "DELETE  FROM public.boardgame WHERE id =' $id' ";
       $db->query($sql1) ;
    }
 }
