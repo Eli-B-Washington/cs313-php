@@ -84,7 +84,7 @@ echo $title . $author . $rating . $type . $playersMin . $playersMax . $cooperati
 
 
 
-if(!empty($_POST['title'] 'author' or 'rating' or 'type' or 'playersmin' or 'playersmax' or 'cooperative' or 'length'])){
+if(!empty($_POST['title' and 'author' and 'rating' and 'type' and 'playersmin' and 'playersmax' and 'cooperative' and 'length'])){
 
   try{
 $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length)';
