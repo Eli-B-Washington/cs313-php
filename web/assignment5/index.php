@@ -48,14 +48,7 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 
 echo "</table>";
 
-?>
 
-<input type="submit" name="delete" value="delete"/>
-<button type="button">Update</button>
-<button id="addButton">Add</button>
-</form>
-
-<?php 
 if(isset($_POST['delete']))
 {
  $cnt=array();
@@ -67,6 +60,12 @@ if(isset($_POST['delete']))
      //$db->query($query);
   }
 ?>
+
+<input type="submit" name="delete" value="delete"/>
+<button type="button">Update</button>
+<button id="addButton">Add</button>
+</form>
+
 
 
 </p>
