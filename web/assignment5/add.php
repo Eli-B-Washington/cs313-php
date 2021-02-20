@@ -98,11 +98,11 @@ $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, 
     $stmt -> bindValue(":cooperative", $cooperative);
     $stmt -> bindValue(":length", $length);
     $stmt -> execute();
-    `$newid = $pdo ->lastInsertId("public.boardGame_id_seq");`
+    $newid = $pdo ->lastInsertId("public.boardGame_id_seq");
   }
   catch(Exception $ex){
     echo "Error with DB. Details: $ex";
-die();
+    die();
   }
 }
 }
