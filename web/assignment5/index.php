@@ -55,7 +55,7 @@ foreach($del_id as $value){
    $query = "DELETE FROM ".$detectinglocations." WHERE id='".$value."'";
    $stmt = $db->prepare($query);
    echo $stmt;
-   $stmt -> execute();
+   
 }
 ?>
 
