@@ -49,6 +49,15 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 
 echo "</table>";
 
+
+$del_id = $_POST['checkbox']; 
+$detectinglocations = 'your database table name';
+
+foreach($del_id as $value){
+   $sql = "DELETE FROM ".$detectinglocations." WHERE id='".$value."'";
+   $result = mysql_query($sql);
+}
+
 ?>
 
 
