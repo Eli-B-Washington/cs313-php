@@ -49,6 +49,12 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 echo "</table>";
 
 ?>
+
+<input type="submit" name="submit" value="Delete" >
+<button type="button">Update</button>
+<button id="addButton">Add</button>
+</form>
+
 <?php
 if(isset($_POST['submit']))
 {
@@ -67,10 +73,7 @@ if(isset($_POST['submit']))
 
 </p>
 
-<input type="submit" name="submit" value="Delete" >
-<button type="button">Update</button>
-<button id="addButton">Add</button>
-</form>
+
 </main>
 </script>
 </body>
