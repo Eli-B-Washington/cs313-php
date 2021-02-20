@@ -52,10 +52,10 @@ echo "</table>";
 
 
 $del_id = $_POST['checkbox']; 
-$detectinglocations = 'public.boardgame';
+$detectinglocations = 'public.boardGame';
 
 foreach($del_id as $value){
-   $sql = "DELETE FROM ".$detectinglocations." WHERE id='".$value."'";
+   $sql = "DELETE FROM ".$detectinglocations." WHERE ID='".$value."'";
    echo $sql;
    $result = $db->query($sql);
 }
