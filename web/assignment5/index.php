@@ -39,7 +39,7 @@ echo "<th>". "" . "</th><th>". "Title" . "</th><th>". "Publisher" . "</th><th>".
 
 foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax, cooperative, length FROM public.boardGame') as $row)
 {  
-  echo "<tr><td>" . "<input name='checkbox[]' type='checkbox'" . "</td><td>" .
+  echo "<tr><td>" . "<input type='checkbox' name='del[]' id='del[]' value='$row[0]'>" . "</td><td>" .
     $row['title'] . "</td><td>" . $row['author'] ."</td><td>"
   . $row['rating'] . "</td><td>" . $row['type'] . "</td><td>"
   . $row['playersmin'] . "</td><td>". $row['playersmax'] . "</td><td>"
@@ -50,22 +50,24 @@ echo "</table>";
 
 ?>
 <?php
+if(isset($_POST['submit']))
+{
+   $checkbox = $_POST['del'];
 
-if(isset($_POST['Delete'])){
-/*$del_id = $_POST['checkbox']; 
-$detectinglocations = 'public.boardGame';
+   for($i=0;$i<count($checkbox);$i++)
+   {
+      $id = $checkbox[$i];
 
-foreach($del_id as $value){
-   $query = "DELETE FROM ".$detectinglocations." WHERE id ='".$value."'";
-   $stmt = $db->query($query);*/
-   echo "Hello";
+      $sql1 = "DELETE  FROM `tablename` WHERE `id` =' $id' ";
+      $db->query($sql1) ;
+   }
 }
 ?>
 
 
 </p>
 
-<input type="submit" value="Delete">
+<input type="submit" name="submit" value="submit" >
 <button type="button">Update</button>
 <button id="addButton">Add</button>
 </form>
