@@ -25,7 +25,7 @@
 </header>
 <main>
 <p>
-<form action="" method="post">
+<form action="" method="POST">
 <?php 
 require 'db_connect.php';
 $db = get_db();
