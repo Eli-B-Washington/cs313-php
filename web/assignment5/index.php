@@ -25,6 +25,7 @@
 </header>
 <main>
 <p>
+<form action="" method="post">
 <?php
 require 'db_connect.php';
 $db = get_db();
@@ -62,7 +63,7 @@ foreach($del_id as $value){
 
 
 </p>
-<form action="" method="post">
+
 <button type="submit">Delete</button>
 <button type="button">Update</button>
 </form>
