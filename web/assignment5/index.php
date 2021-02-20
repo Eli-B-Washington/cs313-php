@@ -63,7 +63,7 @@ if(isset($_POST['delete']))
  for($i=0;$i<$cnt;$i++)
   {
      $del_id=$_POST['chkbox'][$i];
-     $query="delete from $tablename where Id=".$del_id;
+     $query="DELETE FROM public.boardgame WHERE id=".$del_id;
      $db->query($query);
   }
 ?>
