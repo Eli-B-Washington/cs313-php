@@ -56,9 +56,9 @@ $detectinglocations = 'public.boardGame';
 
 foreach($del_id as $value){
    $query = "DELETE FROM ".$detectinglocations." WHERE ID='".$value."'";
-   echo $sql;
    $stmt = $db->prepare($query);
    $stmt -> execute();
+   $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
@@ -70,10 +70,6 @@ foreach($del_id as $value){
 <button id="addButton">Add</button>
 </form>
 </main>
-<script type="text/javascript">
-    document.getElementById("addButton").onclick = function () {
-        location.href = "add.php";
-    };
 </script>
 </body>
 
