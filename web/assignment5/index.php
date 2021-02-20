@@ -48,9 +48,6 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 
 echo "</table>";
 
-?>
-
-<?php
 $del_id = $_POST['checkbox']; 
 $detectinglocations = 'public.boardGame';
 
