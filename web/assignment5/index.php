@@ -55,7 +55,7 @@ echo "</table>";
 <button id="addButton">Add</button>
 </form>
 
-<?php /*
+<?php 
 if(isset($_POST['delete']))
 {
  $cnt=array();
@@ -65,7 +65,7 @@ if(isset($_POST['delete']))
      $del_id=$_POST['chkbox'][$i];
      $query="DELETE FROM public.boardgame WHERE id=".$del_id;
      $db->query($query);
-  } */
+  }
 ?>
 
 
