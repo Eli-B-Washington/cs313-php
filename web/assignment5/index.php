@@ -64,7 +64,7 @@ foreach($del_id as $value){
 
 </p>
 
-<button type="submit">Delete</button>
+<input type="submit">Delete
 <button type="button">Update</button>
 </form>
 </main>
