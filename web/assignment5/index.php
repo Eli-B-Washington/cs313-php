@@ -56,6 +56,7 @@ $detectinglocations = 'public.boardgame';
 
 foreach($del_id as $value){
    $sql = "DELETE FROM ".$detectinglocations." WHERE id='".$value."'";
+   echo $sql;
    $result = $db->query($sql);
 }
 
