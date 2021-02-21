@@ -52,10 +52,10 @@ echo "</table>";
 if(isset($_POST['delete']))
 {
  $cnt=$_POST['chkbox'];
- for($i=0;$i<$cnt;$i++)
+ for($i=0;$i<1000;$i++)
   {
      $del_id=$_POST['chkbox'][$i];
-     $query="DELETE FROM public.boardgame WHERE id=".$del_id;
+     $query="DELETE FROM public.boardgame WHERE id=". $del_id;
      $db->query($query);
   }
 ?>
