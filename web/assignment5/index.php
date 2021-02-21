@@ -49,7 +49,7 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 echo "</table>";
 
 
-if(isset($_POST['delete']))
+/*if(isset($_POST['delete']))
 {
  $cnt=$_POST['chkbox'];
  for($i=0;$i<1000;$i++)
@@ -57,7 +57,7 @@ if(isset($_POST['delete']))
      $del_id=$_POST['chkbox'][$i];
      $query="DELETE FROM public.boardgame WHERE id=". $del_id;
      $db->query($query);
-  }
+  }*/
 ?>
 
 <input type="submit" name="delete" value="delete"/>
