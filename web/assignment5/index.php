@@ -49,18 +49,18 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 echo "</table>";
 
 
-/*if(isset($_POST['delete']))
-{
- $cnt=$_POST['chkbox'];
- for($i=0;$i<1000;$i++)
-  {
-     $del_id=$_POST['chkbox'][$i];
-     $query="DELETE FROM public.boardgame WHERE id=". $del_id;
-     $db->query($query);
-  }*/
+$checkbox = $_POST['del'];
+
+    for($i=0;$i<count($checkbox);$i++)
+    {
+       $id = $checkbox[$i];
+
+       $sql1 = "DELETE  FROM public.boardgame WHERE id =' $id' ";
+       query($sql1) ;
+    }
 ?>
 
-<input type="submit" name="delete" value="delete"/>
+<input type="submit" name="delete" value="Delete"/>
 <button type="button">Update</button>
 <button id="addButton">Add</button>
 </form>
