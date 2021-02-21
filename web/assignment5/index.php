@@ -51,16 +51,17 @@ echo "</table>";
 
 $checkbox = $_POST['del'];
 
-    for($i=0;$i<count($checkbox);$i++)
-    {
-       $id = $checkbox[$i];
-
-       $sql1 = "DELETE  FROM public.boardgame WHERE id =' $id' ";
-       query($sql1) ;
-    }
+$cnt=array();
+$cnt=count($_POST['chkbox']);
+for($i=0;$i<$cnt;$i++)
+ {
+    $del_id=$_POST['chkbox'][$i];
+    $query="delete from $tablename where Id=".$del_id;
+    mysql_query($query);
+ }
 ?>
 
-<input type="submit" name="delete" value="Delete"/>
+<input type="submit" name="del" value="Delete"/>
 <button type="button">Update</button>
 <button id="addButton">Add</button>
 </form>
