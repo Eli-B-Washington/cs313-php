@@ -72,7 +72,7 @@ $length = $_POST['length'];
 
 
 
-if(!empty($_POST['title' and 'author' and 'rating' and 'type' and 'playersmin' and 'playersmax' and 'cooperative' and 'length'])){
+if(!empty($_POST['title'])){
 
   try{
 $query = 'INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length)';
