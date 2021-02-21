@@ -62,7 +62,7 @@ print_r($checkbox);
 
 
 
-<input type="submit" name="del" value="Delete"/>
+<input type="submit" name="delete" value="Delete"/>
 <button type="button">Update</button>
 <button id="addButton">Add</button>
 </form>
