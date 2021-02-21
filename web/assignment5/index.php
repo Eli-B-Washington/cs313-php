@@ -25,7 +25,7 @@
 </header>
 <main>
 <p>
-<form action="" method="POST">
+
 <?php 
 require 'db_connect.php';
 $db = get_db();
@@ -61,10 +61,13 @@ for($i=0;$i<$cnt;$i++)
  }
 ?>
 
+<form action="" method="POST">
+
 <input type="submit" name="del" value="Delete"/>
 <button type="button">Update</button>
 <button id="addButton">Add</button>
 </form>
+
 
 
 

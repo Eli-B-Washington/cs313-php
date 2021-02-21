@@ -49,22 +49,11 @@
   <label for="length">Length (Min):</label><br>
   <input type="number" id="length" name="length">
 
-  <input type="submit" name="submit" value="Submit me!" />
+  <input type="submit" name="submit" value="Submit" />
 </form>
 
 <?php
-/*
-values from the table
 
-id SERIAL NOT NULL PRIMARY KEY,
-title VARCHAR(100) NOT NULL,
-author VARCHAR(100) NOT NULL,
-rating FLOAT(3) NOT NULL,
-type VARCHAR(100) NOT NULL,
-playersMin SMALLINT NOT NULL,
-playersMax SMALLINT NOT NULL,
-cooperative BOOLEAN NOT NULL,
-length int*/
 
 
 require 'db_connect.php';
