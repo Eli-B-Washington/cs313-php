@@ -25,7 +25,7 @@
 </header>
 <main>
 <p>
-
+<form action="" method="POST">
 <?php 
 require 'db_connect.php';
 $db = get_db();
@@ -50,18 +50,18 @@ echo "</table>";
 
 
 $checkbox = $_POST['del'];
-
-    for($i=0;$i<count($checkbox);$i++)
+print_r($checkbox);
+    /*for($i=0;$i<count($checkbox);$i++)
     {
        $id = $checkbox[$i];
 
        $sql1 = "DELETE  FROM public.boardgame WHERE public.boardgame.id =' $id' ";
-      $db->query($sql1);
-    }
+       $db->query($sql1);
+    }*/
 ?>
 
 
-<form action="" method="POST">
+
 <input type="submit" name="del" value="Delete"/>
 <button type="button">Update</button>
 <button id="addButton">Add</button>
