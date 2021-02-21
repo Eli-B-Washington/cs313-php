@@ -55,7 +55,7 @@ print_r($checkbox);
     {
        $id = $checkbox[$i];
 
-       $sql1 = "DELETE  FROM public.boardgame WHERE public.boardgame.name =' $id' ";
+       $sql1 = "DELETE  FROM public.boardgame WHERE public.boardgame.title =' $id' ";
        $db->query($sql1);
     }
 ?>
