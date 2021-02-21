@@ -77,3 +77,5 @@ CREATE TABLE scriptures_topic(
 	scripture_id INT NOT NULL REFERENCES topic(id),
 	topic_id INT NOT NULL REFERENCES scriptures(id)
 );
+
+INSERT INTO public.boardgame(title, author, rating, type, playersmin, playersmax, cooperative, length) VALUES (:title, :author, :rating, :type, :playersmin, :playersmax, :cooperative, :length);

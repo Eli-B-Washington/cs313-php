@@ -29,7 +29,7 @@ require 'db_connect.php';
 $db = get_db();
 
 
-foreach ($db->query('SELECT title FROM public.boardGame, public.wantoplay WHERE  ') as $row)
+foreach ($db->query("SELECT title, username FROM public.boardGame, public.wantoplay, public.user WHERE wanttoplay = 't'  ") as $row)
 {  echo 'Title: ' . $row['title'];
     echo '   Publisher: ' . $row['author'];
 echo '<br/>';
