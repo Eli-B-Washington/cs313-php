@@ -49,6 +49,7 @@ foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax,
 echo "</table>";
 
 
+if(isset($_POST['delete'])){
 $checkbox = $_POST['del'];
 print_r($checkbox);
     for($i=0;$i<count($checkbox);$i++)
@@ -59,6 +60,7 @@ print_r($checkbox);
        print_r($db->query($sql1));
        $db->query($sql1);
     }
+  }
 ?>
 
 
