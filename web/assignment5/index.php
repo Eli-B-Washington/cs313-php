@@ -68,7 +68,8 @@ print_r($checkbox);
 
 <input type="submit" name="delete" value="Delete"/>
 <button type="button" onclick="location.href='add.php';">Add</button>
-<button id="addButton">Add</button>
+
+<button id="addButton">Update</button>
 </form>
 
 
