@@ -61,15 +61,15 @@ print_r($checkbox);
        $db->query($sql1);
     }
   }
+
 ?>
 
 
 
 <input type="submit" name="delete" value="Delete"/>
-<button type="button">Update</button>
+<button type="button" onclick="location.href='add.php';">Add</button>
 <button id="addButton">Add</button>
 </form>
-
 
 
 
