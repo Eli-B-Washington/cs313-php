@@ -48,7 +48,7 @@
 
   <label for="length">Length (Min):</label><br>
   <input type="number" id="length" name="length">
-
+  <br>
   <input type="submit" name="submit" value="Submit" />
 </form>
 
