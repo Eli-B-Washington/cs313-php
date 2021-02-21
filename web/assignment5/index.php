@@ -25,7 +25,7 @@
 </header>
 <main>
 <p>
-
+<form action="" method="POST">
 <?php 
 require 'db_connect.php';
 $db = get_db();
@@ -39,7 +39,7 @@ echo "<th>". "" . "</th><th>". "Title" . "</th><th>". "Publisher" . "</th><th>".
 
 foreach ($db->query('SELECT title, author, rating, type, playersmin, playersmax, cooperative, length FROM public.boardGame') as $row)
 {  
-  echo "<tr><td>" . "<input type='checkbox' name='chkbox[]'  value='.$row[0].'/>" . "</td><td>" .
+  echo "<tr><td>" . "<input type='checkbox' name='del[]' id='del[]' value='$row[0]' style='margin:10px;'>" . "</td><td>" .
     $row['title'] . "</td><td>" . $row['author'] ."</td><td>"
   . $row['rating'] . "</td><td>" . $row['type'] . "</td><td>"
   . $row['playersmin'] . "</td><td>". $row['playersmax'] . "</td><td>"
@@ -51,17 +51,16 @@ echo "</table>";
 
 $checkbox = $_POST['del'];
 
-$cnt=array();
-$cnt=count($_POST['chkbox']);
-for($i=0;$i<$cnt;$i++)
- {
-    $del_id=$_POST['chkbox'][$i];
-    $query="delete from $tablename where Id=".$del_id;
-    mysql_query($query);
- }
+    for($i=0;$i<count($checkbox);$i++)
+    {
+       $id = $checkbox[$i];
+
+       $sql1 = "DELETE  FROM public.boardgame WHERE id =' $id' ";
+      $db->query($sql1);
+    }
 ?>
 
-<form action="" method="POST">
+
 
 <input type="submit" name="del" value="Delete"/>
 <button type="button">Update</button>
