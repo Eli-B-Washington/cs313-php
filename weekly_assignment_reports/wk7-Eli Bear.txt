@@ -1,0 +1,28 @@
+Eli Bear
+
+1. Project Title / One sentence description:
+
+Board Game Updater
+
+
+2. The Heroku URL for your web application:
+
+https://stormy-sands-82203.herokuapp.com/assignment5/index.php
+
+
+3. The GitHub URL for your source code repository:
+
+https://github.com/Eli-B-Washington/cs313-php
+
+4. A link to the SQL file that contains the commands used to create your tables (e.g. a link to the myDb.sql file at GitHub, or something similar).
+
+https://github.com/Eli-B-Washington/cs313-php/blob/master/db/myDB.sql
+
+5. Please provide a brief description of what your project does and how to use the application. Make sure to include any required information like a username and password.
+
+Currently able to see a list of board games, add to the list of board games, as well as remove board games that the user does not want to see.
+
+6. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+There is still quite a bit that I would like to do with the porject.  I still need to be able to add games to a want to play and a have played list for different users.
+I have a search function that is not implemented yet.  I also need to add a way to update information already in the database without deleting it.
