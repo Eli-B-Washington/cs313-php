@@ -51,13 +51,11 @@ echo "</table>";
 
 if(isset($_POST['delete'])){
 $checkbox = $_POST['del'];
-print_r($checkbox);
     for($i=0;$i<count($checkbox);$i++)
     {
        $id = $checkbox[$i];
        print_r($id);
        $sql1 = "DELETE FROM public.boardgame WHERE title ='$id' ";
-       print_r($db->query($sql1));
        $db->query($sql1);
     }
   }
