@@ -22,6 +22,13 @@ if (request.url == '/home'){
         response.write(student.name + " " + student.class);
         response.end();
           }
+
+          else if (request.url == '/extra'){
+            response.writeHead(200, {"Content-Type": "text/plain"});
+            response.write("This is Extra!\n");
+            response.end();
+              }
+
 else{
   response.writeHead(404, {"Content-Type": "text/html"});
   response.write("Incorrect Address\n");
