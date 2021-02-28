@@ -1,0 +1,4 @@
+For the final project I would like to do a Single Page Application.
+  I think right now what I would like to do is a baseball statistics webpage
+that can bring up a player and then display their batting average and other stats.
+Also, have the ability to add a new player to a database and update player information.
